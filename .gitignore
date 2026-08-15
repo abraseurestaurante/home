@@ -1,0 +1,10 @@
+node_modules/
+.vercel/
+
+# Segredos: nunca versionar
+.env
+.env.*
+!.env.example
+
+.DS_Store
+Thumbs.db

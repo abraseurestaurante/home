@@ -1,0 +1,10 @@
+{
+  "name": "abraseurestaurante",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Landing page de abertura de restaurante — H2 Consultoria",
+  "type": "module",
+  "engines": {
+    "node": ">=18"
+  }
+}
