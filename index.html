@@ -550,6 +550,8 @@
         }
 
         .number-card {
+            display: flex;
+            flex-direction: column;
             background: rgba(251, 247, 240, 0.05);
             border: 1px solid rgba(228, 193, 121, 0.22);
             padding: 38px 24px;
@@ -579,7 +581,37 @@
         .number-card .sublabel {
             font-size: 14px;
             color: rgba(251, 247, 240, 0.78);
-            margin-top: 10px;
+            /* auto empurra para a base: as legendas dos 4 cards alinham entre si
+               mesmo com alturas de conteúdo diferentes */
+            margin-top: auto;
+            padding-top: 12px;
+        }
+
+        /* O card de credenciais é uma lista, não um número: mesmo peso visual
+           dos outros cards, mas em corpo de texto legível. */
+        .credenciais {
+            list-style: none;
+            margin: 16px auto 0;
+            display: grid;
+            gap: 9px;
+            text-align: left;
+        }
+
+        .credenciais li {
+            position: relative;
+            padding-left: 26px;
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--creme);
+            line-height: 1.35;
+        }
+
+        .credenciais li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--ouro-claro);
+            font-weight: 700;
         }
 
         @media (max-width: 1024px) {
@@ -1101,7 +1133,11 @@
 
                 <div class="number-card">
                     <div class="label">📚 Credenciais</div>
-                    <span class="big-number">✓ Palestrante | ✓ Professora | ✓ Consultora de Referência</span>
+                    <ul class="credenciais">
+                        <li>Palestrante</li>
+                        <li>Professora</li>
+                        <li>Consultora de Referência</li>
+                    </ul>
                     <span class="sublabel">USP · Equipotel · Fispal</span>
                 </div>
             </div>
