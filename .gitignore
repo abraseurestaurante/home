@@ -1,7 +1,10 @@
 node_modules/
 .vercel/
 
-# Segredos: nunca versionar
+# Segredos: nunca versionar.
+# A exceção do .env.example precisa vir por último: em .gitignore o
+# último padrão que casa é o que vale, e um `.env*` depois daqui
+# voltaria a ignorá-lo.
 .env
 .env.*
 !.env.example
