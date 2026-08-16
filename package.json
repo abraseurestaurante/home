@@ -4,6 +4,9 @@
   "private": true,
   "description": "Landing page de abertura de restaurante — H2 Consultoria",
   "type": "module",
+  "scripts": {
+    "dev": "node dev-server.js"
+  },
   "engines": {
     "node": ">=18"
   }
